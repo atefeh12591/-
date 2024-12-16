@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>یلدای شما</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            direction: rtl;
+        }
+        input, button {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .message {
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>یلدای شما مبارک!</h1>
+    <p>لطفاً اسمتان را وارد کنید:</p>
+    <input type="text" id="name" placeholder="اسم شما">
+    <button onclick="showMessage()">ارسال</button>
+    <p class="message" id="message"></p>
+
+    <script>
+        function showMessage() {
+            const name = document.getElementById('name').value;
+            if (name) {
+                document.getElementById('message').textContent = `${name} جان، یلدات مبارک! 🎉🍉`;
+            } else {
+                document.getElementById('message').textContent = 'لطفاً نام خود را وارد کنید.';
+            }
+        }
+    </script>
+</body>
+</html>
